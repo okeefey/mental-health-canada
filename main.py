@@ -39,8 +39,9 @@ def insert_data(file_path, demo_id):
 
     conn.commit()
 
-insert_data("mentalhealthmen.csv", demo_id_men)
-insert_data("mentalhealthwomen.csv", demo_id_women)
+insert_data("data/mentalhealthmen.csv", demo_id_men)
+
+insert_data("data/mentalhealthwomen.csv", demo_id_women)
 
 cur.close()
 conn.close()
