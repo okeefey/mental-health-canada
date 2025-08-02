@@ -18,3 +18,12 @@ CREATE TABLE mental_health_survey (
     productivity_score INTEGER,
     mental_health_risk VARCHAR(20)
 );
+
+SELECT gender, AVG(depression_score) AS avg_depression, AVG(anxiety_score) AS avg_anxiety
+FROM mental_health_survey
+GROUP BY gender;
+
+SELECT seeks_treatment, COUNT(*) AS count
+FROM mental_health_survey
+GROUP BY seeks_treatment;
+

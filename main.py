@@ -30,5 +30,13 @@ for _, row in df.iterrows():
     ))
 
 conn.commit()
+
+group_stats = df.groupby('gender')[['depression_score', 'anxiety_score']].mean()
+print(group_stats)
+
+treatment_counts = df['seeks_treatment'].value_counts()
+print(treatment_counts)
+
+
 cur.close()
 conn.close()
