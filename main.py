@@ -10,7 +10,7 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
-df = pd.read_csv("data/mental_health_dataset.csv")  # adjust path
+df = pd.read_csv("data/mental_health_dataset.csv")  
 
 for _, row in df.iterrows():
     cur.execute("""
